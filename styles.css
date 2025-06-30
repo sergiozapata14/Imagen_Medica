@@ -1,0 +1,285 @@
+/* Estilos globales */
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100%;
+    display: block;
+}
+
+/* Estilos del encabezado */
+header
+{
+    color: black;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/*Promociones*/
+.slider ul
+{
+    display: flex;
+    animation: automatico 20s infinite linear 0.6s;
+}
+
+@media(max-width: 768px)
+{
+    .slider img
+    {
+        height: auto;
+        width: 600px;
+    }
+}
+
+@keyframes automatico
+{
+    0% {margin-left: 100%;}
+    100% {margin-left: -130%;}
+}
+
+/* Estilos del contenido principal */
+.contenedor
+{
+    position: relative;
+    width: 80vw;
+    max-width: 600px;
+    background-color: #0064ba;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    z-index: 1;
+}
+.input-contenedor
+{
+    position: relative;
+    margin: 15% 0%;
+    width: 60vw;
+    max-width: 500px;
+    border-bottom: 2px solid white;
+}
+.input-contenedor label
+{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 100%;
+    pointer-events: none;
+    transition: .6s;
+    font-weight: bold;
+}
+input:focus ~ label, input:valid ~ label
+{
+    top: -5px;
+}
+.input-contenedor input
+{
+    width: 100%;
+    height: 5%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    color: white;
+}
+@media(max-width: 768px)
+{
+    .contenedor
+    {
+        width: 80vw;
+        top: 31vh;
+        left: 8vw;
+    }
+}
+.olvido
+{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.olvido label input
+{
+    margin: 12px;
+}
+.olvido label a
+{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9em;
+    margin: 12px;
+    display: block;
+}
+.olvido label a:hover
+{
+    text-decoration: underline;
+}
+.buttonLogin
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    background: #0cc;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+    color: white;
+}
+button:hover
+{
+    opacity: .9;
+}
+
+main
+{
+    background-image: url("img/BG02.jpg");
+    border-top: 3vh solid white;
+    padding: 2%;
+    background-position: right; /* Pone la imagen a la derecha */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/*Información de la empresa*/
+.informacion
+{
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+.informacion ul
+{
+    display: flex;
+    padding-left: 120px;
+    width: 100%;
+    animation: automatico2 600s infinite alternate linear 2s;
+}
+
+.informacion li
+{
+    width: 100%;
+    list-style: none;
+}
+
+.informacion img
+{
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width: 768px)
+{
+    .informacion img{
+        height: auto;
+        width: 1200px;
+    }
+}
+
+@keyframes automatico2
+{
+    0% {margin-left: 0%;}
+    50% {margin-left: -1500%;}
+}
+
+/* Estilos del pie de página */
+footer
+{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position:relative;  
+    width: 100%;
+    height: 8vh;
+    top: 35vh;
+    z-index: 2;
+}
+/*Mensaje de error */
+.error
+{
+    color: red;
+}
+/*Carrusel de la información de la empresa*/
+.informacionCarrucel
+{
+    margin: 6%;
+    position: relative;
+    top: 35vh;
+}
+
+/*Tamaño de las imagenes de las promociones*/
+.imgTamanoPromo
+{
+    width: 90vw; /* Cambia el tamaño según tus necesidades */
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.buttonInformacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black;
+  }
+  .informacion-text {
+    font-size: 34px; 
+    font-weight: bold; 
+    text-align: center;
+  }
+
+  .video-container {
+    position: relative;
+  
+    height: 0;
+    padding-bottom: 40%;
+    margin: 8%;
+    
+  }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.carousel-item{
+    text-align: center;
+}
+
+.tamaño
+{
+    background-color: transparent;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 15%;
+}
+.float-end a
+{
+    color: white;
+    position: absolute;
+    z-index: 10;
+    top: 76vh;
+    right: 3vw;
+    font-size: 8vh;
+}
+@media(max-width: 768px)
+{
+    .float-end a
+    {
+        top: 38vh;
+    }
+}

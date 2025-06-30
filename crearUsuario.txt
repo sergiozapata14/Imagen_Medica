@@ -1,0 +1,4 @@
+use imagen_medica_base_de_datos;
+
+CREATE USER 'reccreative'@'localhost' IDENTIFIED BY 'reccreative';
+GRANT ALL PRIVILEGES ON * . * TO 'reccreative'@'localhost';
